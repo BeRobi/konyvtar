@@ -32,9 +32,10 @@ return new class extends Migration
         ]);
 
         User::create([
-            'name' => "Julcsi",
-            'email' => 'julcsimail@mail.hu',
-            'password' => Hash::make("blabla")
+            'name' => "Admin",
+            'email' => 'admin@mail.com',
+            'password' => Hash::make("abrakadabra"),
+            'permission' => 'admin'
         ]);
 
         User::create([
