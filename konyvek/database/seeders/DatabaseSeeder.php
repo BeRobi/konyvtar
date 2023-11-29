@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Book;
 use App\Models\Copy;
+use App\Models\Lending;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
         Book::factory(10)->create();
         Copy::factory(10)->create();
+        Lending::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

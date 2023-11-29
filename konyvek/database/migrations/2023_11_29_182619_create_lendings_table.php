@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('lendings', function (Blueprint $table) {
-            $table->id();
+            $table->primary(['user_id', 'copy_id', 'start']);
+            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('copy_id')->references('copy_id')->on('copies');
+            $table->date('start')->default(now());
             $table->timestamps();
         });
     }

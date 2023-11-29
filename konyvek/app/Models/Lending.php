@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lending extends Model
 {
     use HasFactory;
+    //összetett kulcs megadása:
 
     protected function setKeysForSaveQuery($query)
     {
@@ -20,4 +21,9 @@ class Lending extends Model
         return $query;
     }
 
+    protected $fillable = [
+        'user_id',
+        'copy_id',
+        'start',
+    ];
 }
